@@ -1,3 +1,22 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
 title = "My New Hugo Site"
+theme = "mytheme"
+
+[menu]
+
+  [[menu.main]]
+    name = "home"
+    url = "#home"
+    weight = 1
+
+  [[menu.main]]
+    name = "about"
+    url = "#about"
+    weight = 2
+
+  [[menu.main]]
+    name = "contact"
+    url = "#contact"
+    weight = 3
+
