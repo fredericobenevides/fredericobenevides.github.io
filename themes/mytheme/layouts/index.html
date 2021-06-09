@@ -3,24 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" type="text/css" href="/css/style.css" />
     <title>Teste</title>
   </head>
   <body>
-    <div class="hero">
-      <nav class="menu">
-        <ul>
-          {{
-            range.Site.Menus.main
-          }}
-          <li>
-            <a href="{{ .URL }}">{{ .Name }}</a>
-          </li>
-          {{
-            end
-          }}
-        </ul>
-      </nav>
+    <div class="home">
+      <div class="container">
+        <header class="menu-container">
+          <nav class="menu">
+            <ul>
+              {{
+                range.Site.Menus.main
+              }}
+              <li>
+                <a href="{{ .URL }}">{{ .Name }}</a>
+              </li>
+              {{
+                end
+              }}
+            </ul>
+          </nav>
+        </header>
+
+        <div class="hero">
+          <h1 class="hero__title">
+            Frederico
+            <br />
+            Benevides
+          </h1>
+        </div>
+      </div>
     </div>
   </body>
 </html>
