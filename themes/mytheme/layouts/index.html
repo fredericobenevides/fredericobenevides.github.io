@@ -8,7 +8,9 @@
       href="https://fonts.googleapis.com/css2?family=Bungee&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    {{ $sass := resources.Get "style.scss" }}
+    {{ $style := $sass | resources.ToCSS }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}" />
     <title>Teste</title>
   </head>
   <body>

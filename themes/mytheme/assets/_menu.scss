@@ -1,0 +1,16 @@
+.menu-container {
+  padding-top: 2.5em;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu ul {
+  display: flex;
+}
+
+.menu a {
+  font-family: "Bungee", Arial, sans-serif;
+  color: #f8f8f8;
+  text-transform: uppercase;
+  padding: 0.625em;
+}
