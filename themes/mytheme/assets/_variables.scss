@@ -2,5 +2,12 @@ $l-device: 1440px;
 $m-device: 768px;
 $s-device: 484px;
 
-$font-1: "Roboto", monospace;
-$font-2: "Bungee", Arial, sans-serif;
+$white: #f8f8f8;
+$blue: #253d55;
+
+$font-default: "Roboto", monospace;
+$font-title: "Bungee", Arial, sans-serif;
+
+@function em($pixel, $font-size: 16) {
+  @return $pixel / $font-size + em;
+}
