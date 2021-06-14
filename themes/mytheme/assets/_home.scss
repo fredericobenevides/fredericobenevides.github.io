@@ -1,7 +1,11 @@
-.home {
-  height: 100vh;
-  width: 100%;
+.home--bg {
   background-color: $blue;
+}
+
+.home {
+  min-height: 100vh;
+  max-width: $l-device;
+  margin: 0 auto;
 }
 
 .home__hero {
@@ -22,5 +26,4 @@
   display: flex;
   justify-content: flex-end;
   padding-top: em(40);
-  margin: 0 em(70);
 }

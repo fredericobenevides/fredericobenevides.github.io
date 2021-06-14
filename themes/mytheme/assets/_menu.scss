@@ -3,8 +3,9 @@
 }
 
 .menu a {
+  display: block;
+  padding: em(10);
   font-family: $font-title;
   color: $white;
   text-transform: uppercase;
-  padding: em(10);
 }
