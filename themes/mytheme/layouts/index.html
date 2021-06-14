@@ -12,6 +12,9 @@
     {{ $style := $sass | resources.ToCSS }}
     <link rel="stylesheet" href="{{ $style.Permalink }}" />
     <title>{{ .Site.Title }}</title>
+    {{- if not .Site.IsServer -}}
+    {{ partial "gtag" (dict "params" .Site.Params )}}
+    {{- end -}}
   </head>
   <body>
     {{ partial "home/home" (dict "menus" .Site.Menus.main) }}
