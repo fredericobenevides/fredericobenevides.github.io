@@ -1,0 +1,52 @@
+<div class="contact_bg">
+  <section id="contact" class="contact">
+    <div class="contact__left">
+      <div class="contact__title">
+        <h1>Contact</h1>
+      </div>
+    </div>
+
+    <div class="contact__right">
+      <header class="contact__menu">
+        <nav class="menu">
+          <ul>
+            {{
+              range.menus
+            }}
+            <li>
+              <a href="{{ .URL }}">{{ .Name }}</a>
+            </li>
+            {{
+              end
+            }}
+          </ul>
+        </nav>
+      </header>
+
+      <div class="contact__links">
+        <ul>
+          <li class="linkedin">
+            <span>in</span>
+            <a
+              href="{{ .params.linkedin}}"
+              target="_blank"
+              >{{ .params.linkedin}}</a
+            >
+          </li>
+          <li class="github">
+            <img src="/social/github.svg" alt="github" />
+            <a
+              href="{{ .params.github }}"
+              target="_blank"
+              >{{ .params.github }}</a
+            >
+          </li>
+          <li class="email">
+            <span>@</span>
+            <a href="mailto:{{ .params.email }}">{{ .params.email }}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</div>

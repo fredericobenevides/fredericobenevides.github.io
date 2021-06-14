@@ -14,86 +14,8 @@
     <title>{{ .Site.Title }}</title>
   </head>
   <body>
-    <div class="home--bg">
-      <div id="home" class="home">
-        <header class="home__menu">
-          <nav class="menu">
-            <ul>
-              {{
-                range.Site.Menus.main
-              }}
-              <li>
-                <a href="{{ .URL }}">{{ .Name }}</a>
-              </li>
-              {{
-                end
-              }}
-            </ul>
-          </nav>
-        </header>
-
-        <div class="home__hero">
-          <h1 class="home__title">
-            Frederico
-            <br />
-            Benevides
-          </h1>
-        </div>
-      </div>
-    </div>
-
-    <div class="about__bg">
-      <section id="about" class="about">
-        <div class="about__left">
-          <div class="about__title">
-            <h1>About</h1>
-            <img src="/images/fred.jpeg" alt="Minha foto" />
-          </div>
-        </div>
-
-        <div class="about__right">
-          <header class="about__menu">
-            <nav class="menu">
-              <ul>
-                {{
-                  range.Site.Menus.main
-                }}
-                <li>
-                  <a href="{{ .URL }}">{{ .Name }}</a>
-                </li>
-                {{
-                  end
-                }}
-              </ul>
-            </nav>
-          </header>
-
-          <div class="about__info">
-            <h2 class="about__subtitle">Who am I?</h2>
-            <div class="about__text">
-              <p>
-                Hi, my name is Frederico Benevides. I’m a 38 years old Brazilian
-                who lives in Bauru, SP, Brazil.
-              </p>
-
-              <p>
-                I’m a Software Engineer with more than 20 years of experience in
-                IT. Before changing my career to Software Engineer, I worked as
-                a Network Administrator. These allowed me to improve my
-                knowledge in infra that helped me to manage many system’s
-                configuration along my career.
-              </p>
-
-              <p>
-                I have a thought that we are able to teach and learn from
-                experienced people to naive people. That's why I believe in team
-                work to share knowledge to help each other improve ourselves. I
-                am considered a problem solver and so I like challenges.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
+    {{ partial "home/home" (dict "menus" .Site.Menus.main) }}
+    {{ partial "home/about" (dict "menus" .Site.Menus.main) }}
+    {{ partial "home/contact" (dict "menus" .Site.Menus.main "params" .Site.Params) }}
   </body>
 </html>

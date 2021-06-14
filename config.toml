@@ -20,3 +20,7 @@ theme = "mytheme"
     url = "#contact"
     weight = 3
 
+[params]
+  linkedin = "https://www.linkedin.com/in/fredericobenevides"
+  github = "https://github.com/fredericobenevides"
+  email = "contato@fredericobenevides.com"

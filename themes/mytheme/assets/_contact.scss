@@ -1,8 +1,8 @@
-.about__bg {
-  background-image: linear-gradient(90deg, $white 50%, $grey 50%);
+.contact_bg {
+  background-image: linear-gradient(90deg, $blue 50%, $blue-light 50%);
 }
 
-.about {
+.contact {
   max-width: $l-device;
   min-height: 100vh;
   margin: 0 auto;
@@ -12,7 +12,7 @@
   gap: 30px;
 }
 
-.about__left {
+.contact__left {
   grid-area: left;
   display: flex;
   flex-direction: column;
@@ -20,11 +20,11 @@
   align-items: center;
 }
 
-.about__title {
+.contact__title {
   h1 {
     font-family: $font-title;
     font-size: em(72);
-    color: $blue;
+    color: $white;
     margin-top: em(-20);
     margin-bottom: em(20);
 
@@ -34,54 +34,71 @@
       width: em(10);
       height: em(2);
       margin: em(1) auto;
-      background: $blue;
+      background: $white;
     }
-  }
-
-  img {
-    margin: 0 auto;
-    padding: 4px;
-    box-shadow: 0px 3px 10px 0px $black;
-    border-radius: 50%;
-    width: 101px;
   }
 }
 
-.about__right {
+.contact__right {
   grid-area: right;
   display: grid;
   grid-template-rows: 50px auto;
 }
 
-.about__info {
-  margin-top: em(-50);
+.contact__links {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  h2 {
-    font-family: $font-title;
-    color: $blue;
-    margin-bottom: em(30);
+  font-family: $font-default;
+  font-size: em(18);
+  font-weight: bold;
+  color: $white;
+
+  li {
+    margin-bottom: em(80);
   }
 
-  p {
-    margin-left: em(150);
-    margin-bottom: em(10);
-    font-family: $font-default;
-    color: $black;
-    line-height: 1.5;
+  a {
+    color: $white;
+  }
+
+  span,
+  img {
+    width: rem(50);
+    height: rem(50);
+    padding: 4px;
+    border: 3px solid $white;
+    margin-right: rem(30);
+  }
+
+  span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: rem(30);
+  }
+
+  .email,
+  .github,
+  .linkedin {
+    display: flex;
+    align-items: center;
+  }
+
+  .email span {
+    padding-bottom: 10px;
   }
 }
 
-.about__menu {
+.contact__menu {
   display: flex;
   flex: 2;
   justify-content: flex-end;
   padding-top: em(40);
 
   a {
-    color: $blue;
+    color: $white;
   }
 }
