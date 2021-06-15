@@ -55,6 +55,7 @@
 
 .about__info {
   margin-top: em(-50);
+  margin-left: rem(96);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -67,7 +68,6 @@
   }
 
   p {
-    margin-left: em(150);
     margin-bottom: em(10);
     font-family: $font-default;
     color: $black;
