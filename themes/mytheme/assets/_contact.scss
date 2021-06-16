@@ -3,7 +3,7 @@
 }
 
 .contact {
-  max-width: $l-device;
+  max-width: $xl-device;
   min-height: 100vh;
   margin: 0 auto;
   display: grid;
@@ -85,6 +85,7 @@
   .linkedin {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
   }
 
   .email span {
