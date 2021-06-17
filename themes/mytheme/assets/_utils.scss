@@ -1,0 +1,7 @@
+@function em($pixel, $font-size: 16) {
+  @return $pixel / $font-size + em;
+}
+
+@function rem($pixel, $font-size: 16) {
+  @return $pixel / $font-size + rem;
+}

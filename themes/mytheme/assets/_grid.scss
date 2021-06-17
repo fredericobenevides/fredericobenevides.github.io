@@ -1,0 +1,64 @@
+@mixin d($size) {
+  @if $size == xl {
+    @media screen and (min-width: #{$xl-device}) {
+      @content;
+    }
+  } @else if $size == l {
+    @media screen and (min-width: #{$l-device}) and (max-width: #{$xl-device - 1}) {
+      @content;
+    }
+  } @else if $size == m {
+    @media screen and (min-width: #{$m-device}) and (max-width: #{$l-device - 1}) {
+      @content;
+    }
+  } @else if $size == s {
+    @media screen and (max-width: #{$l-device - 1}) {
+      @content;
+    }
+  }
+}
+
+$columns: 12;
+$gutter: 20px;
+
+[class*="col-"],
+[class*="column"] {
+  margin-left: $gutter / 2;
+  margin-right: $gutter / 2;
+}
+
+.container {
+  max-width: $xl-device;
+  margin: 0 auto;
+}
+
+.columns {
+  display: flex;
+  min-height: 100%;
+}
+
+.column {
+  flex: 1;
+}
+
+@function col($col, $offset: false) {
+  $width: $col / $columns * 100 + "%";
+
+  @if ($offset) {
+    @return calc(#{$width} + #{$gutter / 2});
+  } @else {
+    @return calc(#{$width} - #{$gutter});
+  }
+}
+
+@for $i from 1 through $columns {
+  .col-#{$i} {
+    width: col($i, false);
+  }
+}
+
+@for $i from 1 through $columns {
+  .offset-#{$i} {
+    margin-left: col($i, offset);
+  }
+}

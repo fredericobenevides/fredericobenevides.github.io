@@ -12,11 +12,3 @@ $blue-light: #577999;
 
 $font-default: "Roboto", monospace;
 $font-title: "Bungee", Arial, sans-serif;
-
-@function em($pixel, $font-size: 16) {
-  @return $pixel / $font-size + em;
-}
-
-@function rem($pixel, $font-size: 16) {
-  @return $pixel / $font-size + rem;
-}
