@@ -12,7 +12,7 @@
       @content;
     }
   } @else if $size == s {
-    @media screen and (max-width: #{$l-device - 1}) {
+    @media screen and (max-width: #{$m-device - 1}) {
       @content;
     }
   }
