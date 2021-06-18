@@ -3,30 +3,31 @@
 }
 
 .contact {
-  max-width: $xl-device;
   min-height: 100vh;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-areas: "left right";
-  gap: 30px;
 }
 
-.contact__left {
-  grid-area: left;
+.contact__menu__container {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-end;
+  padding-top: em(40);
+
+  a {
+    color: $white;
+  }
 }
 
 .contact__title {
+  height: calc(100vh - 80px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   h1 {
+    text-align: center;
     font-family: $font-title;
     font-size: em(72);
     color: $white;
-    margin-top: em(-20);
-    margin-bottom: em(20);
+    margin-top: em(-50);
 
     &:after {
       content: "";
@@ -39,65 +40,40 @@
   }
 }
 
-.contact__right {
-  grid-area: right;
-  display: grid;
-  grid-template-rows: 50px auto;
+.contact__info {
+  height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
 }
 
 .contact__links {
-  margin-left: rem(96);
+  li {
+    margin-bottom: em(60);
+  }
+}
+
+.social_links {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 
   font-family: $font-default;
   font-size: em(18);
   font-weight: bold;
   color: $white;
 
-  li {
-    margin-bottom: em(80);
-  }
-
-  a {
-    margin-left: rem(20);
-    color: $white;
-  }
-
   span,
   img {
-    width: rem(50);
-    height: rem(50);
-    padding: 4px;
-    border: 3px solid $white;
-  }
-
-  span {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: rem(30);
+    width: rem(50);
+    height: rem(50);
+    padding: 4px;
+    margin-right: rem(20);
+    border: 3px solid $white;
+    font-size: em(22);
   }
-
-  .email,
-  .github,
-  .linkedin {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-
-  .email span {
-    padding-bottom: 10px;
-  }
-}
-
-.contact__menu {
-  display: flex;
-  flex: 2;
-  justify-content: flex-end;
-  padding-top: em(40);
 
   a {
     color: $white;
