@@ -52,21 +52,19 @@
   }
 }
 
-.social_links {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
+.social__links {
+  padding: em(10);
 
   font-family: $font-default;
   font-size: em(18);
   font-weight: bold;
   color: $white;
 
-  span,
-  img {
+  .social__links__icon {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     width: rem(50);
     height: rem(50);
     padding: 4px;
@@ -76,6 +74,9 @@
   }
 
   a {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
     color: $white;
   }
 }

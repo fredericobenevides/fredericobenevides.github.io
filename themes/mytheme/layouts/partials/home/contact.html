@@ -30,25 +30,25 @@
       <div class="offset-1 col-5">
         <div class="contact__info">
           <ul class="contact__links">
-            <li class="social_links">
-              <span>in</span>
-              <a
-                href="{{ .params.linkedin}}"
-                target="_blank"
-                >{{ .params.linkedin}}</a
-              >
+            <li class="social__links">
+              <a class="link" href="{{ .params.linkedin}}" target="_blank">
+                <div class="social__links__icon">in</div>
+                {{ .params.linkedin}}
+              </a>
             </li>
-            <li class="social_links">
-              <img src="/social/github.svg" alt="github" />
-              <a
-                href="{{ .params.github }}"
-                target="_blank"
-                >{{ .params.github }}</a
-              >
+            <li class="social__links">
+              <a href="{{ .params.github }}" target="_blank">
+                <div class="social__links__icon">
+                  <img src="/social/github.svg" alt="github" />
+                </div>
+                {{ .params.github }}
+              </a>
             </li>
-            <li class="social_links">
-              <span>@</span>
-              <a href="mailto:{{ .params.email }}">{{ .params.email }}</a>
+            <li class="social__links">
+              <a href="mailto:{{ .params.email }}">
+                <div class="social__links__icon">@</div>
+                {{ .params.email }}
+              </a>
             </li>
           </ul>
         </div>
