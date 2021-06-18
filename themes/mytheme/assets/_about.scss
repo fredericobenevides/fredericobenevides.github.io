@@ -1,9 +1,17 @@
 .about__bg {
   background-image: linear-gradient(90deg, $white 50%, $grey 50%);
+
+  @include d(s) {
+    background-image: linear-gradient(160deg, $white 50%, $grey 50%);
+  }
 }
 
 .about {
   min-height: 100vh;
+
+  .columns:nth-child(2) {
+    padding-top: em(40);
+  }
 }
 
 .about__menu__container {
@@ -14,20 +22,19 @@
   a {
     color: $blue;
   }
+
+  @include d(s) {
+    justify-content: center;
+  }
 }
 
 .about__title {
-  height: calc(100vh - 80px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
   h1 {
     text-align: center;
     font-family: $font-title;
     font-size: em(72);
     color: $blue;
-    margin-top: em(-15);
+    margin-top: em(10);
     margin-bottom: em(10);
 
     &:after {
@@ -47,18 +54,24 @@
     border-radius: 50%;
     width: 100px;
   }
+
+  @include d(s) {
+    height: initial;
+    transform: unset;
+
+    h1 {
+      font-size: em(60);
+      margin-top: em(10);
+    }
+  }
 }
 
 .about__info {
-  height: calc(100vh - 80px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
   h2 {
     text-align: center;
     font-family: $font-title;
     color: $blue;
+    margin-top: em(40);
     margin-bottom: em(30);
   }
 
@@ -67,5 +80,21 @@
     font-family: $font-default;
     color: $black;
     line-height: 1.5;
+  }
+
+  @include d(m) {
+    p {
+      font-size: em(15);
+    }
+  }
+
+  @include d(s) {
+    height: unset;
+    transform: unset;
+    padding-bottom: rem(20);
+
+    p {
+      font-size: em(15);
+    }
   }
 }

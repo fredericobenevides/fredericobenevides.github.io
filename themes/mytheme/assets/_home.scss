@@ -18,12 +18,20 @@
 .home__title {
   font-family: $font-title;
   color: $white;
-  font-size: 4.5em;
+  font-size: em(72);
   text-transform: uppercase;
+
+  @include d(s) {
+    font-size: em(60);
+  }
 }
 
-.home__menu {
+.home__menu__container {
   display: flex;
   justify-content: flex-end;
   padding-top: em(40);
+
+  @include d(s) {
+    justify-content: center;
+  }
 }

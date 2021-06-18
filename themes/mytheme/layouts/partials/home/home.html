@@ -1,27 +1,35 @@
 <div class="home--bg">
   <div id="home" class="home">
-    <header class="home__menu">
-      <nav class="menu">
-        <ul>
-          {{
-            range.menus
-          }}
-          <li>
-            <a href="{{ .URL }}">{{ .Name }}</a>
-          </li>
-          {{
-            end
-          }}
-        </ul>
-      </nav>
-    </header>
+    <div class="columns">
+      <div class="offset-6 col-6">
+        <header class="home__menu__container">
+          <nav class="menu">
+            <ul>
+              {{
+                range.menus
+              }}
+              <li>
+                <a href="{{ .URL }}">{{ .Name }}</a>
+              </li>
+              {{
+                end
+              }}
+            </ul>
+          </nav>
+        </header>
+      </div>
+    </div>
 
-    <div class="home__hero">
-      <h1 class="home__title">
-        Frederico
-        <br />
-        Benevides
-      </h1>
+    <div class="columns">
+      <div class="column">
+        <div class="home__hero">
+          <h1 class="home__title">
+            Frederico
+            <br />
+            Benevides
+          </h1>
+        </div>
+      </div>
     </div>
   </div>
 </div>
