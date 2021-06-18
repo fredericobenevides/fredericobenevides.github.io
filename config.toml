@@ -21,8 +21,12 @@ theme = "mytheme"
     weight = 3
 
 [params]
-  linkedin = "https://www.linkedin.com/in/fredericobenevides"
-  github = "https://github.com/fredericobenevides"
+  linkedin = "linkedin.com/in/fredericobenevides"
+  linkedinUrl = "https://www.linkedin.com/in/fredericobenevides"
+
+  github = "github.com/fredericobenevides"
+  githubUrl = "https://github.com/fredericobenevides"
+
   email = "contato@fredericobenevides.com"
 
   gtag = "G-712RT362ZG"
