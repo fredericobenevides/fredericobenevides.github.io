@@ -73,8 +73,6 @@
   }
 
   @include d(m) {
-    margin-top: em(30);
-
     li {
       margin-bottom: em(30);
     }
