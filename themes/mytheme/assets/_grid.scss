@@ -30,11 +30,21 @@ $gutter: 20px;
 .container {
   max-width: $xl-device;
   margin: 0 auto;
+  position: relative;
+
+  @include d(s) {
+    max-width: $s-device;
+    padding-left: em(10);
+    padding-right: em(10);
+  }
 }
 
 .columns {
   display: flex;
-  min-height: 100%;
+
+  @include d(s) {
+    display: block;
+  }
 }
 
 .column {
@@ -55,10 +65,20 @@ $gutter: 20px;
   .col-#{$i} {
     width: col($i, false);
   }
-}
 
-@for $i from 1 through $columns {
   .offset-#{$i} {
     margin-left: col($i, offset);
+  }
+}
+
+@include d(s) {
+  @for $i from 1 through $columns {
+    .col-#{$i} {
+      width: 100%;
+    }
+
+    .offset-#{$i} {
+      margin-left: 0;
+    }
   }
 }
