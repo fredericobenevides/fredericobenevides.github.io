@@ -1,4 +1,4 @@
-baseURL = "https://fbenevides.io/"
+baseURL = "https://benevides.io/"
 languageCode = "en-us"
 title = "Frederico Benevides"
 theme = "mytheme"
@@ -29,6 +29,6 @@ enableRobotsTXT = true
   github = "github.com/fredericobenevides"
   githubUrl = "https://github.com/fredericobenevides"
 
-  email = "me@fbenevides.io"
+  email = "frederico@benevides.io"
 
-  gtag = "G-SFEY3SPS0H"
+  gtag = "G-4BVT2MG9PY"
